@@ -3,7 +3,7 @@
 </script>
 
 <aside style="width: 320px; border-right: 1px solid #ddd; padding: 12px; overflow: auto">
-	<h2 style="margin: 0 0 12px">Stånd</h2>
+	<h2 style="margin: 0 0 12px">Warenangebot</h2>
 
 	<div style="display: grid; gap: 8px">
 		{#each $stalls as s (s.id)}

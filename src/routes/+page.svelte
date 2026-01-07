@@ -4,6 +4,7 @@
 </script>
 
 <!-- <h1>Wochenmarkt am Stephansplatz</h1> -->
+<header><h1>Wochenmarkt am Stephansplatz</h1></header>
 <div style="display:flex; height: 80vh">
 	<Sidebar />
 	<div style="flex:1">
