@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import('leaflet/dist/leaflet.css')
-	import { MAP_CONFIG } from '$lib/map/config'
+
+  import { MAP_CONFIG } from '$lib/map/config'
 	import { addStallsLayer } from '$lib/stalls/layer'
-	import type { StallFeatureCollection } from '$lib/types/stall'
+	import { stalls, selectedStallId } from '$lib/stalls/store'
+
+  import type { StallFeatureCollection } from '$lib/types/stall'
 
   let el: HTMLDivElement;
 
@@ -21,9 +24,28 @@
 
 		const res = await fetch('/data/stall.geojson')
 		const data = (await res.json()) as StallFeatureCollection
+    stalls.set(data.features)
 
-		const group = addStallsLayer({ L, map, data })
+		//const group = addStallsLayer({ L, map, data })
+		//map.fitBounds(group.getBounds(), { padding: [20, 20] })
+const { group, byId } = addStallsLayer({
+			L,
+			map,
+			data,
+			onSelect: (id) => selectedStallId.set(id)
+		})
+
 		map.fitBounds(group.getBounds(), { padding: [20, 20] })
+
+		const unsub = selectedStallId.subscribe((id) => {
+			if (!id) return
+			const layer = byId.get(id)
+			if (!layer) return
+			map.fitBounds(layer.getBounds(), { maxZoom: 20, padding: [40, 40] })
+			layer.openPopup()
+		})
+
+		return () => unsub()
 	})
 </script>
 

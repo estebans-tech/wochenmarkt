@@ -20,11 +20,13 @@ const parseSize = (s: StallSize): { w: number; h: number } => {
 export function addStallsLayer(args: {
 	L: typeof import('leaflet')
 	map: import('leaflet').Map
-	data: StallFeatureCollection
+	data: StallFeatureCollection,
+  onSelect: (id: string) => void
 }) {
 	const { L, map, data } = args
 
 	const group = L.layerGroup().addTo(map)
+	const byId = new Map<string, import('leaflet').Rectangle>()
 
 	for (const f of data.features ?? []) {
 		const [lng, lat] = f.geometry.coordinates
@@ -36,7 +38,7 @@ export function addStallsLayer(args: {
 		const cat = pickCategory(f.properties.categories, f.properties.primaryCategory)
 		const style = CATEGORY_STYLE[cat]
 
-		L.rectangle(
+		const rect = L.rectangle(
 			[
 				[lat - dLat, lng - dLng],
 				[lat + dLat, lng + dLng]
@@ -47,5 +49,10 @@ export function addStallsLayer(args: {
 			.bindPopup(f.properties.name)
 	}
 
-	return group
+
+		if (f.id) {
+			byId.set(f.id, rect)
+			rect.on('click', () => onSelect(f.id))
+		}
+	return { group, byId }
 }
