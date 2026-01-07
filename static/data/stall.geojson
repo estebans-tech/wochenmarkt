@@ -7,13 +7,23 @@
   "geometry": { "type": "Point", "coordinates": [9.755661, 52.360590] },
   "properties": { "name": "Stall 1", "size": "3x2" }
 },
-
 {
   "type": "Feature",
   "id": "stall-2",
   "geometry": { "type": "Point", "coordinates": [9.755484, 52.360541] },
-  "properties": { "name": "Stall 2", "size": "4x2" }
+  "properties": { "name": "Stall 2", "size": "3x2" }
+},
+{
+  "type": "Feature",
+  "id": "stall-3",
+  "geometry": { "type": "Point", "coordinates": [9.755312, 52.360484] },
+  "properties": { "name": "Stall 3", "size": "4x2" }
+},
+{
+  "type": "Feature",
+  "id": "stall-4",
+  "geometry": { "type": "Point", "coordinates": [9.755111, 52.360428] },
+  "properties": { "name": "Stall 4", "size": "4x2" }
 }
-
   ]
 }
