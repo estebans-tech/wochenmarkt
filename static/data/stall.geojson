@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+  "type": "Feature",
+  "id": "stall-1",
+  "geometry": { "type": "Point", "coordinates": [9.755661, 52.360590] },
+  "properties": { "name": "Stall 1", "size": "3x2" }
+},
+
+{
+  "type": "Feature",
+  "id": "stall-2",
+  "geometry": { "type": "Point", "coordinates": [9.755484, 52.360541] },
+  "properties": { "name": "Stall 2", "size": "4x2" }
+}
+
+  ]
+}
