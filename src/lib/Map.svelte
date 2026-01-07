@@ -1,28 +1,30 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	let el: HTMLDivElement;
+	import('leaflet/dist/leaflet.css')
+	import { MAP_CONFIG } from '$lib/map/config'
+	import { addStallsLayer } from '$lib/stalls/layer'
+	import type { StallFeatureCollection } from '$lib/types/stall'
 
-	onMount(async () => {
-		const L = (await import('leaflet')).default;
-		await import('leaflet/dist/leaflet.css');
+  let el: HTMLDivElement;
 
-		const map = L.map(el, { zoomControl: true }).setView([52.36109, 9.75492], 19);
+  onMount(async () => {
+		const L = await import('leaflet')
 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; OpenStreetMap contributors'
-		}).addTo(map);
+		const map = L.map(el, { zoomControl: true }).setView(
+			MAP_CONFIG.defaultCenter,
+			MAP_CONFIG.defaultZoom
+		)
 
-		const response = await fetch('/data/stall.geojson');
-		const stalls = await response.json();
+		L.tileLayer(MAP_CONFIG.tilesUrl, {
+			attribution: MAP_CONFIG.attribution
+		}).addTo(map)
 
-		L.geoJSON(stalls, {
-			pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 7 }),
-			onEachFeature: (feature, layer) => {
-				const name = feature?.properties?.name ?? 'Foodtruck';
-				layer.bindPopup(name);
-			}
-		}).addTo(map);
-	});
+		const res = await fetch('/data/stall.geojson')
+		const data = (await res.json()) as StallFeatureCollection
+
+		const group = addStallsLayer({ L, map, data })
+		map.fitBounds(group.getBounds(), { padding: [20, 20] })
+	})
 </script>
 
 <div bind:this={el} style="height: 70vh; border: 1px solid #ccc; border-radius: 12px;"></div>
