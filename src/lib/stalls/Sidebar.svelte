@@ -33,6 +33,6 @@
 		</div>
 	{:else}
 		<!-- collapsed state: tomt (eller ikoner senare) -->
-		<div class="h-full" />
+		<div class="h-full"></div>
 	{/if}
 </aside>
