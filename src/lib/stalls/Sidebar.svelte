@@ -1,27 +1,38 @@
 <script lang="ts">
-	import { stalls, selectedStall, selectedStallId } from '$lib/stalls/store'
+	import { Button } from '$lib/components/ui/button/index.js'
+
+	let open = false 
+
+	const W_OPEN = 'min(420px, 96vw)'
+	const W_CLOSED = 'min(12px, 4vw)'
 </script>
 
-<aside style="width: 320px; border-right: 1px solid #ddd; padding: 12px; overflow: auto">
-	<h2 style="margin: 0 0 12px">Warenangebot</h2>
+<aside
+	class="absolute top-0 right-0 z-40 h-full bg-zinc-100 shadow-xl transition-[width] duration-200"
+ style={`width: ${open ? W_OPEN : W_CLOSED}`}
+>
 
-	<div style="display: grid; gap: 8px">
-		{#each $stalls as s (s.id)}
-			<button
-				on:click={() => selectedStallId.set(s.id)}
-				style="text-align:left; padding:8px; border:1px solid #ddd; border-radius:10px; background: {$selectedStallId === s.id ? '#f3f4f6' : 'white'}"
-			>
-				{s.properties.name}
-			</button>
-		{/each}
+	<!-- Toggle-button -->
+	<div class="absolute left-0 top-1/2 -translate-x-2/3 -translate-y-1/2">
+		<Button
+			variant="secondary"
+			class="h-10 w-10 bg-white border border-zinc-200 shadow-sm"
+			onclick={() => (open = !open)}
+			aria-label={open ? 'Collapse sidebar' : 'Expand sidebar'}
+		>
+			<span class="inline-block text-xl">{open ? '»' : '«'}</span>
+		</Button>
 	</div>
 
-	{#if $selectedStall}
-		<hr style="margin: 12px 0" />
-		<div>
-			<strong>{$selectedStall.properties.name}</strong>
-			<div>Size: {$selectedStall.properties.size}</div>
-			<div>Categories: {$selectedStall.properties.categories?.join(', ')}</div>
+	<!-- Innehåll -->
+	{#if open}
+		<div class="h-full p-4 overflow-y-auto">
+			<div class="text-sm text-muted-foreground">
+				Lista + detaljer kommer här
+			</div>
 		</div>
+	{:else}
+		<!-- collapsed state: tomt (eller ikoner senare) -->
+		<div class="h-full" />
 	{/if}
 </aside>

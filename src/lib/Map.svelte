@@ -49,4 +49,5 @@ const { group, byId } = addStallsLayer({
 	})
 </script>
 
-<div bind:this={el} style="height: 70vh; border: 1px solid #ccc; border-radius: 12px;"></div>
+<!-- <div bind:this={el} class="h-full w-full z-30"></div> -->
+<div bind:this={el} class="h-full w-full z-20"></div>

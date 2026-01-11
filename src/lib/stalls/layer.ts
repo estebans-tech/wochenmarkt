@@ -50,9 +50,10 @@ export function addStallsLayer(args: {
 	}
 
 
-		if (f.id) {
+/*		if (f.id) {
 			byId.set(f.id, rect)
 			rect.on('click', () => onSelect(f.id))
 		}
-	return { group, byId }
+*/
+return { group, byId }
 }
