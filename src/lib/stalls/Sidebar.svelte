@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button/index.js'
-
-	let open = false 
+	import StallList from '$lib/stalls/StallList.svelte'
+	
+  let open = true 
 
 	const W_OPEN = 'min(420px, 96vw)'
 	const W_CLOSED = 'min(12px, 4vw)'
@@ -24,15 +25,11 @@
 		</Button>
 	</div>
 
-	<!-- Innehåll -->
+	<!-- Content -->
 	{#if open}
-		<div class="h-full p-4 overflow-y-auto">
-			<div class="text-sm text-muted-foreground">
-				Lista + detaljer kommer här
-			</div>
-		</div>
+    <StallList /> 
 	{:else}
-		<!-- collapsed state: tomt (eller ikoner senare) -->
+		<!-- collapsed state: empty (or icons) -->
 		<div class="h-full"></div>
 	{/if}
 </aside>

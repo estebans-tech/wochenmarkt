@@ -2,43 +2,180 @@
   "type": "FeatureCollection",
   "features": [
     {
-  "type": "Feature",
-  "id": "stall-1",
-  "geometry": { "type": "Point", "coordinates": [9.755661, 52.360590] },
-  "properties": {
-    "name": "Stall 1",
-    "size": "4x2",
-    "categories": ["vegetables_potatoes_fruit", "street_food"],
-    "primaryCategory": "vegetables_potatoes_fruit"
-  }
-  },
+      "type": "Feature",
+      "id": "stall-1",
+      "geometry": { "type": "Point", "coordinates": [9.755647, 52.360594] },
+      "properties": {
+        "name": "Stall 1",
+        "size": "4x2",
+        "categories": ["vegetables_potatoes_fruit"],
+        "primaryCategory": "vegetables_potatoes_fruit"
+      }
+    },
     {
-  "type": "Feature",
-  "id": "stall-2",
-  "geometry": { "type": "Point", "coordinates": [9.755484, 52.360541] },
-   "properties": {
-    "name": "Stall 2",
-    "size": "3x2",
-    "categories": ["plants_flowers"],
-    "primaryCategory": "plants_flowers"
-  }
-},
-{
-  "type": "Feature",
-  "id": "stall-3",
-  "geometry": { "type": "Point", "coordinates": [9.755312, 52.360484] },
-  "properties": {
-    "name": "Stall 3",
-    "size": "6x2",
-    "categories": ["street_food"],
-    "primaryCategory": "street_food"
-  }
-},
-{
-  "type": "Feature",
-  "id": "stall-4",
-  "geometry": { "type": "Point", "coordinates": [9.755111, 52.360428] },
-  "properties": { "name": "Stall 4", "size": "4x2" }
-}
+    "type": "Feature",
+    "id": "stall-2",
+    "geometry": { "type": "Point", "coordinates": [9.755473, 52.360550] },
+    "properties": {
+      "name": "Stall 2",
+      "size": "3x2",
+      "categories": ["plants_flowers"],
+      "primaryCategory": "plants_flowers"
+    }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-3",
+      "geometry": { "type": "Point", "coordinates": [9.755283, 52.360494] },
+      "properties": {
+        "name": "Stall 3",
+        "size": "6x2",
+        "categories": ["vegetables_potatoes_fruit"],
+        "primaryCategory": "vegetables_potatoes_fruit"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-4",
+      "geometry": { "type": "Point", "coordinates": [9.755092, 52.360439] },
+      "properties": {
+        "name": "Stall 4",
+        "size": "4x2",
+        "categories": ["vegetables_potatoes_fruit"],
+        "primaryCategory": "vegetables_potatoes_fruit"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-5",
+      "geometry": { "type": "Point", "coordinates": [9.754910, 52.360512] },
+      "properties": {
+        "name": "Stall 5",
+        "size": "6x2",
+        "categories": ["street_food"],
+        "primaryCategory": "street_food"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-6",
+      "geometry": { "type": "Point", "coordinates": [9.755588, 52.360673] },
+      "properties": {
+        "name": "Stall 6",
+        "size": "6x2",
+        "categories": ["poultry_sausage"],
+        "primaryCategory": "poultry_sausage"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-7",
+      "geometry": { "type": "Point", "coordinates": [9.755403, 52.360617] },
+      "properties": {
+        "name": "Stall 7",
+        "size": "4x2",
+        "categories": ["specialities"],
+        "primaryCategory": "specialities"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-8",
+      "geometry": { "type": "Point", "coordinates": [9.755232, 52.360562] },
+      "properties": {
+        "name": "Stall 8",
+        "size": "3x2",
+        "categories": ["specialities"],
+        "primaryCategory": "specialities"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-9",
+      "geometry": { "type": "Point", "coordinates": [9.754870, 52.360570] },
+      "properties": {
+        "name": "Stall 9",
+        "size": "3x2",
+        "categories": ["poultry_sausage"],
+        "primaryCategory": "poultry_sausage"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-10",
+      "geometry": { "type": "Point", "coordinates": [9.754795, 52.360660] },
+      "properties": {
+        "name": "Stall 10",
+        "size": "6x2",
+        "categories": ["vegetables_potatoes_fruit"],
+        "primaryCategory": "vegetables_potatoes_fruit"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-11",
+      "geometry": { "type": "Point", "coordinates": [9.754768, 52.360719] },
+      "properties": {
+        "name": "Stall 11",
+        "size": "4x2",
+        "categories": ["meat_sausage"],
+        "primaryCategory": "meat_sausage"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-12",
+      "geometry": { "type": "Point", "coordinates": [9.754695, 52.360802] },
+      "properties": {
+        "name": "Stall 12",
+        "size": "2x2",
+        "categories": ["specialities"],
+        "primaryCategory": "specialities"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-13",
+      "geometry": { "type": "Point", "coordinates": [9.754714, 52.360802] },
+      "properties": {
+        "name": "Stall 13",
+        "size": "3x2",
+        "categories": ["specialities"],
+        "primaryCategory": "specialities"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-14",
+      "geometry": { "type": "Point", "coordinates": [9.754642, 52.360906] },
+      "properties": {
+        "name": "Stall 14",
+        "size": "5x2",
+        "categories": ["meat_sausage"],
+        "primaryCategory": "meat_sausage"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-15",
+      "geometry": { "type": "Point", "coordinates": [9.754540, 52.361023] },
+      "properties": {
+        "name": "Stall 15",
+        "size": "7x2",
+        "categories": ["meat_sausage"],
+        "primaryCategory": "meat_sausage"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-16",
+      "geometry": { "type": "Point", "coordinates": [9.754481, 52.361103] },
+      "properties": {
+        "name": "Stall 16",
+        "size": "3x2",
+        "categories": ["organic"],
+        "primaryCategory": "organic"
+      }
+    }
   ]
 }
