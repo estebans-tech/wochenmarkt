@@ -15,6 +15,10 @@ export type StallCategory =
 	| 'textiles'
 	| 'non_food'
 	| 'unassigned'
+	| 'sausage'
+	| 'carrots'
+	| 'potatoes'
+	| 'flowers'
 
 export type StallProperties = {
 	name: string
