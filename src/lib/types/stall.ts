@@ -1,4 +1,4 @@
-export type StallSize = '2x2' | '3x2' | '4x2' | '6x2' | '7x2'
+export type StallSize = '2x2' | '3x2' | '4x2' | '5x2' | '6x2' | '7x2'
 
 export type StallCategory =
 	| 'bakery'

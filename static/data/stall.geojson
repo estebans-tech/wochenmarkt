@@ -52,8 +52,8 @@
       "properties": {
         "name": "Stall 5",
         "size": "6x2",
-        "categories": ["street_food"],
-        "primaryCategory": "street_food"
+        "categories": ["vegetables_potatoes_fruit"],
+        "primaryCategory": "vegetables_potatoes_fruit"
       }
     },
     {
@@ -62,7 +62,7 @@
       "geometry": { "type": "Point", "coordinates": [9.755588, 52.360673] },
       "properties": {
         "name": "Stall 6",
-        "size": "6x2",
+        "size": "4x2",
         "categories": ["poultry_sausage"],
         "primaryCategory": "poultry_sausage"
       }
@@ -74,8 +74,8 @@
       "properties": {
         "name": "Stall 7",
         "size": "4x2",
-        "categories": ["specialities"],
-        "primaryCategory": "specialities"
+        "categories": ["specialties"],
+        "primaryCategory": "specialties"
       }
     },
     {
@@ -85,8 +85,8 @@
       "properties": {
         "name": "Stall 8",
         "size": "3x2",
-        "categories": ["specialities"],
-        "primaryCategory": "specialities"
+        "categories": ["specialties"],
+        "primaryCategory": "specialties"
       }
     },
     {
@@ -129,8 +129,8 @@
       "properties": {
         "name": "Stall 12",
         "size": "2x2",
-        "categories": ["specialities"],
-        "primaryCategory": "specialities"
+        "categories": ["specialties"],
+        "primaryCategory": "specialties"
       }
     },
     {
@@ -140,8 +140,8 @@
       "properties": {
         "name": "Stall 13",
         "size": "3x2",
-        "categories": ["specialities"],
-        "primaryCategory": "specialities"
+        "categories": ["specialties"],
+        "primaryCategory": "specialties"
       }
     },
     {
@@ -175,6 +175,17 @@
         "size": "3x2",
         "categories": ["organic"],
         "primaryCategory": "organic"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "stall-17",
+      "geometry": { "type": "Point", "coordinates": [9.754414, 52.361191] },
+      "properties": {
+        "name": "Stall 17",
+        "size": "4x2",
+        "categories": ["dairy"],
+        "primaryCategory": "dairy"
       }
     }
   ]
