@@ -3,10 +3,6 @@
 	import { CATEGORY_ICON, getPrimaryCategory } from '$lib/stalls/categoryIcons'
 	import { DE_CATEGORY_LABEL } from '$lib/i18n/de/stallCategories'
 
-/**
-  export let primaryCategory: StallCategory | undefined
-	export let categories: StallCategory[] = []
-**/
   const { primaryCategory, categories = [] } = $props<{
     primaryCategory?: StallCategory
     categories: StallCategory[]
