@@ -35,7 +35,7 @@ const { group, byId } = addStallsLayer({
 			onSelect: (id) => selectedStallId.set(id)
 		})
 
-		map.fitBounds(group.getBounds(), { padding: [20, 20] })
+//		map.fitBounds(group.getBounds(), { padding: [20, 20] })
 
 		const unsub = selectedStallId.subscribe((id) => {
 			if (!id) return
