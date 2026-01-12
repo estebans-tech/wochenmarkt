@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Map from '$lib/Map.svelte';
-	import Sidebar from '$lib/stalls/Sidebar.svelte'
+	import Sidebar from '$lib/Sidebar.svelte'
 </script>
 
 <header class="sticky top-0 z-10 border-b border-zinc-300 bg-white">
