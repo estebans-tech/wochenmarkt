@@ -13,13 +13,16 @@
   onMount(async () => {
 		const L = await import('leaflet')
 
-		const map = L.map(el, { zoomControl: true }).setView(
+		const map = L.map(el, { zoomControl: true, minZoom: MAP_CONFIG.minZoom, maxZoom: MAP_CONFIG.maxZoom }).setView(
 			MAP_CONFIG.defaultCenter,
 			MAP_CONFIG.defaultZoom
 		)
 
 		L.tileLayer(MAP_CONFIG.tilesUrl, {
-			attribution: MAP_CONFIG.attribution
+			attribution: MAP_CONFIG.attribution,
+      minZoom: MAP_CONFIG.minZoom,
+      maxZoom: MAP_CONFIG.maxZoom,
+      maxNativeZoom: MAP_CONFIG.maxNativeZoom 
 		}).addTo(map)
 
 		const res = await fetch('/data/stall.geojson')
@@ -41,7 +44,7 @@ const { group, byId } = addStallsLayer({
 			if (!id) return
 			const layer = byId.get(id)
 			if (!layer) return
-			map.fitBounds(layer.getBounds(), { maxZoom: 20, padding: [40, 40] })
+			map.fitBounds(layer.getBounds(), { maxZoom: MAP_CONFIG.maxZoom, padding: [40, 40] })
 			layer.openPopup()
 		})
 

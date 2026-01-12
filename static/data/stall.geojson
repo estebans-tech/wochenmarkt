@@ -125,7 +125,7 @@
     {
       "type": "Feature",
       "id": "stall-12",
-      "geometry": { "type": "Point", "coordinates": [9.754695, 52.360802] },
+      "geometry": { "type": "Point", "coordinates": [9.754736, 52.360764] },
       "properties": {
         "name": "Stall 12",
         "size": "2x2",
