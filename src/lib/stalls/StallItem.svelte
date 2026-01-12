@@ -25,7 +25,7 @@ const primaryCategory = $derived(stall.properties?.primaryCategory)
 		{#if categories.length}
 			<div class="mt-0.5">
 				<CategoryIcon primaryCategory={primaryCategory} categories={categories} />
-			</div>
+      </div>
 		{/if}
 
 		<div class="min-w-0 flex-1">

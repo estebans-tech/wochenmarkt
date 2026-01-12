@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/svelte'
 import { describe, it, expect } from 'vitest'
 
 import CategoryIcon from  '$lib/stalls/CategoryIcon.svelte'
-import { CATEGORY_ICON } from '$lib/stalls/categoryIcons'
+import { CATEGORY_ICON } from '$lib/stalls/domain/categoryIcons'
 import { DE_CATEGORY_LABEL } from '$lib/i18n/de/stallCategories'
 
 describe('CategoryIcon', () => {

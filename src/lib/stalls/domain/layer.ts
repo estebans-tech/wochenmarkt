@@ -1,5 +1,5 @@
 import type { StallFeatureCollection, StallSize } from '$lib/types/stall'
-import { CATEGORY_STYLE, pickCategory } from '$lib/stalls/style'
+import { CATEGORY_STYLE, pickCategory } from '$lib/stalls/domain/style'
 
 // 111_320 ≈ meter per lattitude degree (≈ 111.32 km/°) on the earth surface (WGS84-approx)
 // Vi använder det för en liten marknadsyta → tillräckligt bra för PoC

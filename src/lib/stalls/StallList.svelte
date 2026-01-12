@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { stalls, selectedStallId, selectedStall } from '$lib/stalls/store'
+	import { stalls, selectedStallId, selectedStall } from '$lib/stalls/domain/store'
 	import StallItem from '$lib/stalls/StallItem.svelte'
 </script>
 

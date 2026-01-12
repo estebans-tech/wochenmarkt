@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { StallCategory } from '$lib/types/stall'
-	import { CATEGORY_ICON, getPrimaryCategory } from '$lib/stalls/categoryIcons'
+	import { CATEGORY_ICON, getPrimaryCategory } from '$lib/stalls/domain/categoryIcons'
 	import { DE_CATEGORY_LABEL } from '$lib/i18n/de/stallCategories'
 
   const { primaryCategory, categories = [] } = $props<{

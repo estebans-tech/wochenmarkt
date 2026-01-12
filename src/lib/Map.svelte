@@ -3,8 +3,8 @@
 	import('leaflet/dist/leaflet.css')
 
   import { MAP_CONFIG } from '$lib/map/config'
-	import { addStallsLayer } from '$lib/stalls/layer'
-	import { stalls, selectedStallId } from '$lib/stalls/store'
+	import { addStallsLayer } from '$lib/stalls/domain/layer'
+	import { stalls, selectedStallId } from '$lib/stalls/domain/store'
 
   import type { StallFeatureCollection } from '$lib/types/stall'
 
