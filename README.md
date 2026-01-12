@@ -1,38 +1,52 @@
-# sv
+# Wochenmarkt — Interactive Market Map (SvelteKit + Leaflet)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A small web app that visualizes a weekly market at a fixed location (e.g. Stephansplatz, Hanover) with interactive stalls. Each stall can be selected on the map or via a side panel, and the UI stays in sync (highlight, focus/zoom, and details like product categories).
 
-## Creating a project
+> Portfolio focus: clean component structure, predictable state handling, and testable UI behavior around map interactions.
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Demo
 
-# create a new project in my-app
-npx sv create my-app
-```
+- Live: _add link if available_
+- Screenshot: see repository preview / `/static`
 
-## Developing
+---
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Features
 
-```sh
-npm run dev
+- 🗺️ **Leaflet map** with OpenStreetMap basemap
+- 📍 **Stalls rendered as map features** (markers/polygons depending on implementation)
+- 🔁 **Two-way interaction**
+  - click a stall on the map → highlight + popup/details
+  - click a stall in the list → focus/zoom + highlight on the map
+- 🏷️ **Category labels/tags** per stall (e.g. vegetables, flowers, specialties)
+- 🧩 **Component-based UI** (map, sidebar, labels/tags, data model)
+- 🧪 **Tests** for UI logic and helper utilities (where it makes sense)
+- ♿ **Basic accessibility**: clear hit targets and sensible focus behavior
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+---
 
-## Building
+## Tech Stack
 
-To create a production version of your app:
+- **SvelteKit**
+- **Leaflet**
+- **OpenStreetMap** tiles
+- **Vite**
+- **TypeScript** (if enabled)
+- Testing: **Vitest** + **@testing-library/svelte** (if enabled)
 
-```sh
-npm run build
-```
+---
 
-You can preview the production build with `npm run preview`.
+## Getting Started
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Prerequisites
+- Node.js (recommended: LTS)
+- npm / pnpm / yarn (use whatever the repo uses)
+
+### Install
+```bash
+git clone <your-repo-url>
+cd wochenmarkt
+npm install
+
