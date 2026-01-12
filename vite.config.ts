@@ -24,6 +24,7 @@ export default defineConfig({
           },
 
           include: [
+            'src/**/*.{test,spec}.{js,ts}',
             'src/**/*.svelte.{test,spec}.{js,ts}',
             'src/**/*.browser.{test,spec}.{js,ts}'
           ],

@@ -11,11 +11,11 @@
 
 	<div class="space-y-1 overflow-y-auto">
 		{#each $stalls as stall (stall.id)}
-      <StallItem
-        stall={stall}
-        selected={stall.id == $selectedStallId}
-        onSelect={() => selectedStallId.set(stall.id)}
-      />
-		{/each}
+        <StallItem
+          stall={stall}
+          selected={stall.id == $selectedStallId}
+          onSelect={() => selectedStallId.set(stall.id)}
+        />
+    {/each}
 	</div>
 </div>

@@ -30,7 +30,6 @@ const primaryCategory = $derived(stall.properties?.primaryCategory)
 
 		<div class="min-w-0 flex-1">
 			<div class="font-medium">{name}</div>
-
 			{#if categories.length}
 				<CategoryLabels categories={categories} />
 			{/if}
