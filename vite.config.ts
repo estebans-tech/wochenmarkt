@@ -6,15 +6,14 @@ import { svelteTesting } from '@testing-library/svelte/vite'
 export default defineConfig(({ mode }) => ({
   plugins: [tailwindcss(), sveltekit(), svelteTesting()],
 
-  resolve: {
-    conditions: mode === 'test' ? ['browser'] : [],
-  },
-
   test: {
       projects: [
         {
           name: 'unit',
           extends: true,
+          resolve: {
+            conditions: ['browser'],
+          },
           test: {
             environment: 'jsdom',
             globals: true,
