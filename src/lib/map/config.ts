@@ -11,6 +11,9 @@ export const MAP_CONFIG = {
   maxZoom: 22,
   maxNativeZoom: 19,
 
+  maxZoomOnSelect: 20,
+  minZoomOnSelect: 18,
+
   // Fallback if they are missing
   defaultFeatureName: 'Stall',
   defaultSize: '3x2' as const
