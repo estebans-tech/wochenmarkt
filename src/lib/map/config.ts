@@ -2,8 +2,8 @@ export const MAP_CONFIG = {
   tilesUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   attribution: '&copy; OpenStreetMap contributors',
 
-  // Leaflet uses [lat, lng]
-  defaultCenter: [52.36059, 9.755661] as const,
+  // Leaflet uses [lat, lng] 
+  defaultCenter: [52.36108, 9.755217] as const,
   defaultZoom: 19,
 
   minZoom: 15,
