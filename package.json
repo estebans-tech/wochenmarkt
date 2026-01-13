@@ -13,11 +13,8 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"test": "vitest",
-    "test:ci": "vitest --project unit --project server --run",
+		"test:ci": "vitest run",
 		"test:watch": "vitest run --watch",
-		"test:unit": "vitest --project unit",
-		"test:server": "vitest --project server",
-		"test:browser": "vitest --project browser",
 		"test:all": "npm run test:unit -- --run && npm run test:e2e",
 		"test:e2e": "playwright test"
 	},
